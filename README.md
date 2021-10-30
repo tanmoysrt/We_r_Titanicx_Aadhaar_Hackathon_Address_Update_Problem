@@ -1,4 +1,7 @@
-### Problem Statement : Address Update Challenge in Urban Areas [Theme 1 , Problem 1]
+<p align="center"><img src="https://raw.githubusercontent.com/Tanmoy741127/We_r_Titanicx_Aadhaar_Hackathon_Address_Update_Problem/main/resources/aadhaar_logo.svg" width="150px"/></p>
+<h1 align="center">Aadhaar Hackathon 2021</h1>
+<h4 align="center">Address Update Challenge in Urban Areas [Theme 1 , Problem 1]</h4>
+
 ***
 
 ### Presentation
