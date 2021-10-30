@@ -28,7 +28,7 @@ _ _ _
 * * *
 ### Third Party APIs Used
 - [Google Maps Geocoding APIS](https://developers.google.com/maps/documentation/geocoding/overview) > Used to get longitude and latitude by address
-- [IP API](https://ip-api.com/) > Used to retrieve location and isp details of an IP
+- [IP API.com](https://ip-api.com/) > Used to retrieve location and isp details of an IP
 - [Fast2sms API](fast2sms.com) > Used to send SMS to users
 * * *
 
