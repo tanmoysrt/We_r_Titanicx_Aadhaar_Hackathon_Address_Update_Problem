@@ -1,18 +1,20 @@
 ### Deployment 
 > 🌀 Hosted in AWS Mumbai both the app server
-_ _ _
 
 > 🌀 The installation process has been discussed at the far end of this README
-
- Frontend : [https://main.d3mf157q8c6tmv.amplifyapp.com/
+_ _ _
+Frontend : [https://main.d3mf157q8c6tmv.amplifyapp.com/
 ](https://main.d3mf157q8c6tmv.amplifyapp.com/)
+_ _ _
  Backend : [https://devhunt.in/](https://devhunt.in/)
- 
+_ _ _
 🟠 🟡  Backend Admin Panel Test Account
 > Username : test
-_ _ _
+
 
 > Password : test@1234
+
+_ _ _
 
 🟥 🟧 Backend Tasks with Admin Priviliges
 > Admin Panel of Backend [Default Django Admin Panel] : [https://devhunt.in/](https://devhunt.in/)
