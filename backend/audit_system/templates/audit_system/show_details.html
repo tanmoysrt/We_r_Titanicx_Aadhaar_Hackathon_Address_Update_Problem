@@ -194,6 +194,10 @@
                 {% endwith %}
             {% endifnotequal %}
             <div class=" grid-field">
+                <p><b>Request Status</b></p>
+                <p>{{ audit_log_record.get_request_status_current_display }}</p>
+            </div>
+            <div class=" grid-field">
                 <p><b>Status</b></p>
                 {% if audit_log_record.is_error %} <p class="error">Failed</p> {% else %}<p class="success">Success</p> {% endif %}
             </div>
