@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>Search audit log by Request id</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-decoration: none;
+          box-sizing: border-box;
+        }
+
+        body {
+          padding: 0;
+          margin: 0;
+          width: 100vw;
+          height: 100%;
+            font-family: "Poppins", serif;
+          overflow-x: hidden;
+        }
+        header {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .logos {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2vw;
+        }
+        .uidai-logo img {
+          width: 24vw;
+        }
+        .aadhar-logo img {
+          width: 6vw;
+        }
+
+        main {
+        height: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 3vw;
+          justify-content: center;
+          align-items: center;
+        }
+        .input-field {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 6px;
+            margin-bottom: 25px;
+        }
+
+        .input-field label {
+          font-size: 1.4vw;
+          font-weight: 500;
+          margin-left: 2px;
+        }
+        .input-field input {
+          width: 30vw;
+          height: 3vw;
+          border-radius: 0.3vw;
+          padding: 0 0.6vw;
+          font-size: 1.4vw;
+          border: 2px solid #c0c0c0;
+        }
+        .btn-primary {
+          background-color: #006096;
+          color: #fff;
+          font-size: 1.2vw;
+          font-weight: 600;
+          letter-spacing: 5px;
+          padding: 0.8vw 2.4vw;
+          border: solid 2px transparent;
+          border-radius: 0.4vw;
+          transition: all 0.3s;
+        }
+        .btn-primary:hover {
+          cursor: pointer;
+          background-color: #003f63;
+        }
+
+        .grid-field p {
+          font-size: 1vw;
+        }
+
+        .table2 p {
+          text-align: center;
+          border: solid 1px rgb(190, 190, 190);
+          font-size: 1.4vw;
+          padding: 0.5vw 1vw;
+        }
+    </style>
+</head>
+<body style="height: 100vh">
+    <header>
+        <div class="logos">
+            <div class="uidai-logo">
+                <img src="https://giantsmeet-prod.s3.ap-south-1.amazonaws.com/1635614140047c9444da18e869407e714e9f589177af9.png" alt="" />
+            </div>
+            <div class="aadhar-logo">
+                <img src="https://giantsmeet-prod.s3.ap-south-1.amazonaws.com/16356141400463196eeb4d65b75b7c6c60822c9f6bd38.png" alt="" />
+            </div>
+        </div>
+
+    </header>
+{% if message %}
+    {{ message }}
+{% endif %}
+    <main>
+        <h1>Audit System</h1>
+        <form method="post" style="text-align: center">
+            {% csrf_token %}
+            <div class="input-field aadhar-field">
+                <label for="">Please enter request id</label>
+                <input type="number" name="request_id" placeholder="Enter request id" />
+            </div>
+            <button type="submit"  class="btn-primary" >Search</button>
+        </form>
+    </main>
+
+</body>
+</html>

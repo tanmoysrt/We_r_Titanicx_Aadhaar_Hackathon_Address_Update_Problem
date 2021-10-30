@@ -1,0 +1,221 @@
+{% load json_tag %}
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+    <title>Audit Details</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-decoration: none;
+          box-sizing: border-box;
+        }
+
+        body {
+          padding: 0;
+          margin: 0;
+          width: 100vw;
+          height: 100%;
+          font-family: "Poppins";
+          overflow-x: hidden;
+        }
+        header {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .logos {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2vw;
+        }
+        .uidai-logo img {
+          width: 24vw;
+        }
+        .aadhar-logo img {
+          width: 6vw;
+        }
+
+        main {
+          display: flex;
+          flex-direction: column;
+          gap: 3vw;
+          justify-content: center;
+          align-items: center;
+        }
+        .input-field {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 6px;
+        }
+
+        .input-field label {
+          font-size: 1.4vw;
+          font-weight: 500;
+          margin-left: 2px;
+        }
+        .input-field input {
+          width: 30vw;
+          height: 3vw;
+          border-radius: 0.3vw;
+          padding: 0 0.6vw;
+          font-size: 1.4vw;
+          border: 2px solid #c0c0c0;
+        }
+        .btn-primary {
+          background-color: #006096;
+          color: #fff;
+          font-size: 1.2vw;
+          font-weight: 600;
+          letter-spacing: 5px;
+          padding: 0.8vw 2.4vw;
+          border: solid 2px transparent;
+          border-radius: 0.4vw;
+          transition: all 0.3s;
+        }
+        .btn-primary:hover {
+          cursor: pointer;
+          background-color: #003f63;
+        }
+        .table {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2vw;
+          margin: 4vw 0 2vw 0;
+          background-color: rgb(247, 247, 247);
+          padding: 2.5vw;
+        }
+
+        .table2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+            gap: 0.5vw;
+          align-items: center;
+          margin: 1vw 0 0vw 0;
+          background-color: rgb(247, 247, 247);
+          padding: 2.5vw;
+        }
+        .grid-field {
+          width: 60vw;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          place-items: left;
+        }
+        .grid-field p {
+          font-size: 1vw;
+        }
+
+        .error {
+          color: red;
+        }
+        .success {
+          color: green;
+        }
+    </style>
+</head>
+<body style="height: 100%">
+
+    <header>
+        <div class="logos">
+            <div class="uidai-logo">
+                <img src="https://giantsmeet-prod.s3.ap-south-1.amazonaws.com/1635614140047c9444da18e869407e714e9f589177af9.png" alt="" />
+            </div>
+            <div class="aadhar-logo">
+                <img src="https://giantsmeet-prod.s3.ap-south-1.amazonaws.com/16356141400463196eeb4d65b75b7c6c60822c9f6bd38.png" alt="" />
+            </div>
+        </div>
+    </header>
+
+    {% if message %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+    <main>
+
+        <div class="table">
+
+                <div class="grid-field">
+                    <p><b>Request Id : </b></p>
+                    <p>{{ request_record.id }}</p>
+                </div>
+                <div class=" grid-field">
+                    <p><b>Txn Id : </b></p>
+                    <p>{{ request_record.txn_id }}</p>
+                </div>
+                <div class=" grid-field">
+                    <p><b>Mobile No : </b></p>
+                    <p>{{ request_record.mobile_no }}</p>
+                </div>
+                <div class=" grid-field">
+                    <p><b>Consent Mobile No : </b></p>
+                    <p> {{ request_record.landlord_mobile_no }}</p>
+                </div>
+            </div>
+
+
+    <h2>Audit Logs</h2>
+
+    {% for audit_log_record in audit_log_records %}
+        <div class="table2">
+            <div class="grid-field">
+                <p><b>User : </b></p>
+                <p>{% if audit_log_record.is_requester %}Tenant{% else %}Landlord/Neighbour{% endif %} </p>
+            </div>
+            <div class="grid-field">
+                <p><b>Request IP : </b></p>
+                <p>{{ audit_log_record.ip }}</p>
+            </div>
+
+            {% ifnotequal audit_log_record.ip_details '{}' %}
+
+                {% with ip_details_json=audit_log_record.ip_details|text_to_json %}
+                    <div class=" grid-field">
+                        <p><b>IP Location </b></p>
+                        <p>{{ ip_details_json.location_details.city }} - {{ ip_details_json.location_details.region }} - {{ ip_details_json.location_details.country }} - {{ ip_details_json.location_details.zip }} </p>
+                    </div>
+                    <div class=" grid-field">
+                        <p><b>IP Provider </b></p>
+                        <p>{{ ip_details_json.provider.isp }} - {{ ip_details_json.provider.org }} - {{ ip_details_json.provider.as }}  </p>
+                    </div>
+                {% endwith %}
+            {% endifnotequal %}
+            <div class=" grid-field">
+                <p><b>Status</b></p>
+                {% if audit_log_record.is_error %} <p class="error">Failed</p> {% else %}<p class="success">Success</p> {% endif %}
+            </div>
+            <div class=" grid-field">
+                <p><b>Message</b></p>
+                <p>{{ audit_log_record.message }}</p>
+            </div>
+            <div class=" grid-field">
+                <p><b>Error</b></p>
+                <p> {{ audit_log_record.error }}</p>
+            </div>
+            <div class=" grid-field">
+                <p><b>Timestamp [UTC]</b></p>
+                <p> {{ audit_log_record.event_timestamp }}</p>
+            </div>
+        </div>
+
+
+    {% endfor %}
+    </main>
+
+
+
+</body>
+</html>

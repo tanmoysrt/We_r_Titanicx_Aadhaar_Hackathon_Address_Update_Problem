@@ -1,0 +1,145 @@
+.DS_Store
+frontend/node_modules
+/frontend/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+backend/db.sqlite3
+
+
+# Backup files #
+*.bak
+
+# If you are using PyCharm #
+*/.idea/**/workspace.xml
+*/.idea/**/tasks.xml
+*/.idea/dictionaries
+*/.idea/**/dataSources/
+*/.idea/**/dataSources.ids
+*/.idea/**/dataSources.xml
+*/.idea/**/dataSources.local.xml
+*/.idea/**/sqlDataSources.xml
+*/.idea/**/dynamic.xml
+*/.idea/**/uiDesigner.xml
+*/.idea/**/gradle.xml
+*/.idea/**/libraries
+**.iws /out/
+
+# Python #
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+backend/.Python build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/*.manifest
+backend/*.spec
+
+# Installer logs
+backend/pip-log.txt
+pbackend/ip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+backend/.ipynb_checkpoints
+
+# pyenv
+backend/.python-version
+
+# celery
+backend/celerybeat-schedule.*
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+backend/kuikform_backend/.env
+backend/.venv
+backend/env/
+backend/venv/
+backend/ENV/
+backend/env.bak/
+backend/venv.bak/
+
+# mkdocs documentation
+backend//site
+
+# mypy
+backend/.mypy_cache/
+
+# Sublime Text #
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# Package control specific files Package
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
+
+# Visual Studio Code #
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# Env variable
+/backend/hackathon_adhaar_solution/.env
+/backend/aadhaar_update_app/migrations
