@@ -13,7 +13,7 @@
 ### Deployment 
 > 🌀 Hosted in AWS Mumbai both the frontend and backend server
 
-> 🌀 The installation process has been discussed after the audit logs part
+> 🌀 The installation process has been discussed after [the audit logs part](#run-in-local-server)
 _ _ _
 Frontend [App] : [https://main.d3mf157q8c6tmv.amplifyapp.com/
 ](https://main.d3mf157q8c6tmv.amplifyapp.com/)
