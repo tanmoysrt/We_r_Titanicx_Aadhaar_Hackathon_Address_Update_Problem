@@ -13,7 +13,7 @@
 ### Deployment 
 > 🌀 Hosted in AWS Mumbai both the frontend and backend server
 
-> 🌀 The installation process has been discussed at the far end of this README
+> 🌀 The installation process has been discussed after the audit logs part
 _ _ _
 Frontend : [https://main.d3mf157q8c6tmv.amplifyapp.com/
 ](https://main.d3mf157q8c6tmv.amplifyapp.com/)
@@ -97,4 +97,16 @@ You need to enter the request id that has been sent with SMS to users to get ful
 10. Run ```python manage.py runserver```
 11. You can create superuser by ```python manage.py createsuperuser```
 
- 
+### How to update the distance threshold
+If we are using the .env file in backend then we should update the value of ***"ALLOWED_DISTANCE_BETWEEN_PREVIOUS_AND_UPDATED_ADDRESS_IN_METER"*** or if we are not using .env, we can update the enviroment variables of system directly
+
+#### Thanking You
+*We_r_TitanicX [Reference ID : HgpUQdPf9z]*
+
+#### Team Members
+- Tanmoy Sarkar
+- Kabir Raj Singh
+- Snehanjan Roy
+- Sumanshu Kumar Shaw
+- Adnan Khurshid
+
