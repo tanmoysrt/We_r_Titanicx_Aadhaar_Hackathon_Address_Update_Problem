@@ -18,7 +18,7 @@ _ _ _
 Frontend : [https://main.d3mf157q8c6tmv.amplifyapp.com/
 ](https://main.d3mf157q8c6tmv.amplifyapp.com/)
 _ _ _
- Backend : [https://devhunt.in/](https://devhunt.in/)
+ Backend hosted at : [https://devhunt.in/](https://devhunt.in/)
 _ _ _
 🟠 🟡  Backend Admin Panel Test Account
 > Username : test
@@ -29,7 +29,7 @@ _ _ _
 _ _ _
 
 🟥 🟧 Backend Tasks with Admin Priviliges
-> Admin Panel of Backend [Default Django Admin Panel] : [https://devhunt.in/](https://devhunt.in/)
+> Admin Panel of Backend [Default Django Admin Panel] : [https://devhunt.in/admin/](https://devhunt.in/admin/)
 
 
 > Audit log finder : [https://devhunt.in/audit/](https://devhunt.in/audit/)
