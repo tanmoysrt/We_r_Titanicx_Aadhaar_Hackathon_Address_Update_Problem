@@ -15,7 +15,7 @@
 
 > 🌀 The installation process has been discussed after the audit logs part
 _ _ _
-Frontend : [https://main.d3mf157q8c6tmv.amplifyapp.com/
+Frontend [App] : [https://main.d3mf157q8c6tmv.amplifyapp.com/
 ](https://main.d3mf157q8c6tmv.amplifyapp.com/)
 _ _ _
  Backend hosted at : [https://devhunt.in/](https://devhunt.in/)
