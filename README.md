@@ -11,7 +11,7 @@
 > [Click here to open the video presentation](https://dss.dsdsd)
 
 ### Deployment 
-> 🌀 Hosted in AWS Mumbai both the app server
+> 🌀 Hosted in AWS Mumbai both the frontend and backend server
 
 > 🌀 The installation process has been discussed at the far end of this README
 _ _ _
@@ -39,6 +39,11 @@ _ _ _
 ### Tech Stacks Used
 - In frontend, we have used VueJS
 - In backend, we have used Django with python
+* * *
+### Aadhaar APIs Used
+- **Captcha API** > It is used during the eKYC of tenant and landlord to generate captcha.
+- **OTP Generation API** > It is used to handle OTP requests and send OTP to the Aadhaar registered number.
+- **eKYC API** > It is used to authenticate users and fetch their KYC data. Also  used to get the landlord's address after consent approval
 * * *
 ### Third Party APIs Used
 - [Google Maps Geocoding APIS](https://developers.google.com/maps/documentation/geocoding/overview) > Used to get longitude and latitude by address
