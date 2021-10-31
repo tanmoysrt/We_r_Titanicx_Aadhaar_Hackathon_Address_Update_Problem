@@ -1,25 +1,8 @@
-# aadhaar-front
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# aadhaar-front
+### Run in local server
+##### Run Frontend
+1. Clone the repo
+2. Go to ***frontend*** directory
+3. Run ``` npm install```
+4. Replace your backend url with "BACKEND" variable in ```frontend/src/helper_functions.js```
+5. Run ```npm run serve``` to start localserver
